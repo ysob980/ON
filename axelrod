@@ -1,2 +1,10 @@
 $ pip install axelrod
 import axelrod as axl
+players = [axl.Cooperator(), axl.Defector(), axl.TitForTat(), axl.Grudger()]
+match = axl.Match(players, 5)
+tournament = axl.Tournament(players)
+results = tournament.play()
+results.ranked_names['Defector', 'Tit For Tat', 'Grudger', 'Cooperator']
+plot = axl.Plot(results)
+p = plot.boxplot()
+p.show()
