@@ -1,0 +1,2 @@
+$ pip install axelrod
+import axelrod as axl
